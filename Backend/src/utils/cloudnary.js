@@ -14,11 +14,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDNARY_API_SECRET 
 });
           
-// cloudinary.config({ 
-//   cloud_name: 'dsvdmxrpj', 
-//   api_key: '971741658383869', 
-//   api_secret: 'j-CpgHXpF1gF3Ugzpz4v5NTVo3c' 
-// });
 
 const uploadOnCloudnary = async (localFilePath) => {
     const folderPath = 'gallery/'
