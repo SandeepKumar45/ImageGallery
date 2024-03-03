@@ -8,10 +8,11 @@ function DisplayImage() {
   const { imagename } = useParams()
   const { images, fetchImages } = useContext(imagesContext)
   const navigate = useNavigate()
+
   function deleteImage(image) {
     setButtonLoading(true)
     const public_id = image.replace('gallery/', '')
-    axios.delete(`http://localhost:3000/delete-image/${public_id}`)
+    axios.delete(`https://clumsy-erin-crocodile.cyclic.app/delete-image/${public_id}`)
       .then((response) => {
         console.log("image deleted sucessfully", response);
         fetchImages()
